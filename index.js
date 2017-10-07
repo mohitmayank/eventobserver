@@ -1,12 +1,20 @@
 var util = require('util');
 var EventEmitter = require('events').EventEmitter;
 
+var addInnumerable = require('micro-helpers/defineProperty/addInnumerable');
+
 //lodash
 var _ = {
 	uniqueId : require('lodash/uniqueId')
 };
 
 var EventObserver = function(){
+	addInnumerable(this, 'domain', {force : true});
+	addInnumerable(this, '_events', {force : true});
+	addInnumerable(this, '_eventsCount', {force : true});
+	addInnumerable(this, '_maxListeners', {force : true});
+	addInnumerable(this, '__sMap', {force : true});
+	addInnumerable(this, '__cbMap', {force : true});
 	EventEmitter.call(this);
 };
 

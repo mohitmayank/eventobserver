@@ -1,6 +1,6 @@
 {
   "name": "eventobserver",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Tell an object to listen to a particular event on an other object. The advantage of using this form, instead of other.on(event, callback, object), is that observe allows the object to keep track of the events, and they can be removed all at once later on. The callback will always be called with object as context.",
   "main": "index.js",
   "scripts": {
@@ -18,6 +18,6 @@
   "homepage": "https://github.com/mohitmayank/eventobserver#readme",
   "dependencies": {
     "lodash": "^4.17.4",
-    "micro-helpers": "^1.0.1"
+    "micro-helpers": "^1.0.3"
   }
 }
